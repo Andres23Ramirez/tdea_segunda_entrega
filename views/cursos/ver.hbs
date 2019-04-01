@@ -1,0 +1,11 @@
+<p>Ver Cursos</p>
+
+<ul>
+{{#each cursos as |item|}}
+    {{#if item.[estado] }}
+        <li>
+            id: {{item.[id]}} Nombre: {{item.[nombre]}} Descripcion: {{item.[descripcion]}} Valor: {{item.[valor]}} Modalidad: {{item.[modalidad]}} Intensidad: {{item.[intensidad]}} Estado: {{ item.[estado]}}
+        </li>
+    {{/if}}
+{{/each}}
+</ul>

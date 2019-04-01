@@ -1,0 +1,19 @@
+<p>Inscritos</p>
+
+<ul>
+{{#each cursos as |item|}}    
+    <li>
+        <ul> 
+            <li>
+                id: {{item.[id]}} Nombre: {{item.[nombre]}} Descripcion: {{item.[descripcion]}} Valor: {{item.[valor]}} Modalidad: {{item.[modalidad]}} Intensidad: {{item.[intensidad]}} Estado: {{ item.[estado]}}
+            </li>  
+            <p>Inscritos</p>  
+            {{#each item.[inscritos] as |item|}}
+                <li>
+                    id: {{item.[id]}} Nombre: {{item.[nombre]}} correo: {{item.[correo]}} telefono: {{item.[telefono]}}
+                </li>
+            {{/each}}                   
+        </ul>
+    </li>    
+{{/each}}
+</ul>
